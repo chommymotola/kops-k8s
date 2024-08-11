@@ -24,6 +24,8 @@
 
 ## 2a) create kops user and add user to the sudoers group
 ``` sh
+ sudo hostnamectl set-hostname kops
+ sudo su - ubuntu
  sudo adduser kops
  sudo echo "kops  ALL=(ALL) NOPASSWD:ALL" | sudo tee /etc/sudoers.d/kops
  sudo su - kops
